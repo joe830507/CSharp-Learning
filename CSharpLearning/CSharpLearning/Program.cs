@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Buffers.Text;
 
 namespace CSharpLearning
 {
@@ -7,7 +6,7 @@ namespace CSharpLearning
     {
         static void Main(string[] args)
         {
-            IDemonstrate id = new ReflectionAndComposition();
+            IDemonstrate id = new MyEncrytion();
             id.Demonstrate();
         }
     }
@@ -18,28 +17,21 @@ namespace CSharpLearning
         public struct FaultData { }
         public class FastBuilder { }
     }
-
-    public class ReflectionAndComposition : IDemonstrate
+    namespace Samples
+    {
+        public class Pen
+        {
+            public float StrokeWidth { get; private set; }
+            public Pen()
+            {
+                StrokeWidth = 1.2f;
+            }
+        }
+    }
+    public class MyWebHostConfig : IDemonstrate
     {
         public void Demonstrate()
         {
-            checkType();
-        }
-        public void checkType()
-        {
-            Assembly ass = Assembly.LoadFrom("CSharpLearning.dll");
-            Type[] types = ass.GetTypes();
-            foreach (var t in types)
-            {
-                Console.WriteLine("{0} -", t.FullName);
-                if (t.IsClass)
-                    Console.WriteLine("Reference type:");
-                else if (t.IsValueType)
-                    Console.WriteLine("figure type:");
-                else
-                    Console.WriteLine("other type");
-                Console.WriteLine("\n");
-            }
         }
     }
 }
