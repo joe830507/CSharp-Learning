@@ -1,0 +1,20 @@
+﻿@page "{handler?}"
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model Example351.Pages.testModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        UserName:
+        <input type="text" name="username" value="" /><br />
+        Password:
+        <input type="password" name="password" /><br />
+        <div>
+            <input type="submit" value="LoginPublic" asp-page-handler="LoginPublic"/>
+            <input type="submit" value="LoginHidden" asp-page-handler="LoginHidden"/>
+        </div>
+    </form>
+</body>
+</html>

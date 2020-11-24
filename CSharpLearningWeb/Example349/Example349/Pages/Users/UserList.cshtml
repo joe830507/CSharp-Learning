@@ -1,0 +1,31 @@
+﻿@page
+@model Example349.Pages.UserListModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>User List</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ 
+                    for (int i = 1; i < 10; i++)
+                    {
+                        <tr>
+                            <td>@string.Format("User {0}",i)</td>
+                            <td>@i</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@page
+@using Example347
+@model Example347.Demopages.TestModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Test page</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" readonly asp-for="ProductID" /><br />
+        <input type="text" asp-for="ProductName" /><br />
+        <input type="text" asp-for="ProductDate" /><br />
+        <input asp-for="ProductFamily" /><br />
+        <br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+    <div>
+        @{
+            if (ViewData.ContainsKey("msg"))
+            {
+                <p>@ViewData["msg"].ToString()</p>
+            }
+        }
+    </div>
+</body>
+</html>
