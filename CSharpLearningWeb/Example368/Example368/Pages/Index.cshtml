@@ -1,0 +1,29 @@
+﻿@page "~/"
+@model Example368.Pages.IndexModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="~/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <button id="btnstart">Move right</button>
+        <button id="btnreset">Reset</button>
+    </div>
+    <div>
+        <div id="rect" style="border:1px solid black;background-color:powderblue;width:100px;height:100px;" />
+    </div>
+    <script>
+        $("#btnstart").click(() => {
+            console.log('Hell world')
+            $("#rect").animate({
+                left: "+=50",
+                height: "toggle"
+            }, 600)
+        })
+        $("#btnreset").click(() => {
+            $("#rect").css("left", 0)
+        })
+    </script>
+</body>
+</html>

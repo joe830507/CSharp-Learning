@@ -1,0 +1,13 @@
+﻿@page "/"
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment envhost
+@model Example367.Pages.DefaultModel
+
+    <div>
+        Current Application:@envhost.ApplicationName
+    </div>
+    <div>
+        Executing Application:@envhost.EnvironmentName
+    </div>
+    <div>
+        Root Directory:@envhost.ContentRootPath
+    </div>

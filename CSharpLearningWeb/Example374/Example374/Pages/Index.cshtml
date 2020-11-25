@@ -1,0 +1,16 @@
+﻿@page "/"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration config
+@model Example374.Pages.IndexModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>@config["applicationName"]</title>
+</head>
+<body>
+    <p>ApplicationName:@config["applicationName"]</p>
+    <p>Envrionment:@config["environment"]</p>
+    <p>Listening URL:@config["urls"]</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@page
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Default</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label for="city">City:</label>
+            </td>
+            <td>
+                <input type="text" name="city" form="form" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Name:</label>
+            </td>
+            <td>
+                <input type="text" name="name" form="form" />
+            </td>
+        </tr>
+    </table>
+    <form id="form" asp-controller="Demo" asp-action="PostUp">
+        <input type="submit"  value="submit"/>
+    </form>
+</body>
+</html>

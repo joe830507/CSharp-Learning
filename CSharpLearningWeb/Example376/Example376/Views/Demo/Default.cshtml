@@ -1,0 +1,24 @@
+﻿@using Microsoft.Extensions.Options
+@using Example376
+@inject IOptions<TestOptions> opt
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        @{ 
+            TestOptions o = opt?.Value;
+        }
+        @if (o == null)
+        {
+            <div>No option</div>
+        }
+        else
+        {
+            <div>
+                <p>Item 1 : @o.Item1</p>
+                <p>Item 2 : @o.Item2</p>
+            </div>
+        }
+    </body>
+    </html>

@@ -1,0 +1,16 @@
+﻿@page
+@model Example375.Pages.testModel
+@inject Microsoft.Extensions.Options.IOptions<Example375.DemoOptions> opt
+@{
+    Example375.DemoOptions doption = opt?.Value;
+}
+@if (doption != null)
+{
+    <p>@string.Format("{0} : {1}", nameof(doption.OptionA), doption.OptionA)</p>
+    <p>@string.Format("{0} : {1}", nameof(doption.OptionB), doption.OptionB)</p>
+    <p>@string.Format("{0} : {1}", nameof(doption.OptionC), doption.OptionC)</p>
+}
+else
+{
+    <p>No Information</p>
+}

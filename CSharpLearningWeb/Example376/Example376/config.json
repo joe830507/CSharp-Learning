@@ -1,0 +1,8 @@
+{
+  "urls": "http://localhost:16420",
+  "environment": "Development",
+  "myOptions": {
+    "item1": "Option -A",
+    "item2": "Option -B"
+  }
+}
